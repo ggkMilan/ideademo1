@@ -7,5 +7,5 @@ import java.io.Serializable;
  * @time 2022-09-22 10:35
  **/
 public class Xi implements Serializable {
-    private static final long serialVersionUID = 1176590050911543748111L;
+    private static final long serialVersionUID = 117659005L;
 }
