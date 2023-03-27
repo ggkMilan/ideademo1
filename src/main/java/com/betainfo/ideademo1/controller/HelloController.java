@@ -3,7 +3,11 @@ package com.betainfo.ideademo1.controller;
 import org.springframework.context.annotation.Scope;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * @author ggk
@@ -15,7 +19,17 @@ import org.springframework.web.bind.annotation.RestController;
 public class HelloController {
 
     @GetMapping("/hi")
-    public String hi(){
+    public String hi(@RequestParam(value = "nnn",required = false) String name){
+        System.out.println(name);
+
+        Map<String, String> mymap = new HashMap<String, String>();
+
+
+        for (int i = 0; i < 20; i++) {
+            System.out.println(i);
+        }
+
+
         return "123";
     }
 }
